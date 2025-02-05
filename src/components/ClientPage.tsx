@@ -46,6 +46,7 @@ export default function ClientPage({
     <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
       <Header
         hospitals={initialHospitals}
+        selectedDepartment={selectedDepartment}
         onDepartmentChange={setSelectedDepartment}
         showCircles={showCircles}
         onCircleVisibilityChange={setShowCircles}
