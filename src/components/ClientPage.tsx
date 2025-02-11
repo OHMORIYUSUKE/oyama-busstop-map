@@ -4,7 +4,9 @@ import { useState } from "react";
 import { Hospital, Stop } from "@/lib/types";
 import MapSection from "@/components/MapSection";
 import { Header } from "@/components/Header";
-import { MAP_CONFIG } from "@/lib/constants";
+import { MAP_CONFIG, APP_CONFIG } from "@/lib/constants";
+import { Box, Link } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 type ClientPageProps = {
   initialHospitals: Hospital[];
@@ -60,6 +62,35 @@ export default function ClientPage({
           showCircles={showCircles}
           walkingDistance={MAP_CONFIG.WALKING_DISTANCES[walkingTime]}
         />
+        <Box
+          position="fixed"
+          bottom={16}
+          left={16}
+          bgcolor="white"
+          p={1}
+          borderRadius={1}
+          boxShadow={1}
+          zIndex={1000}
+        >
+          <Link
+            href={APP_CONFIG.GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
+              color: "text.primary",
+              textDecoration: "none",
+              "&:hover": {
+                textDecoration: "underline",
+              },
+            }}
+          >
+            <GitHubIcon fontSize="small" />
+            ソースコード
+          </Link>
+        </Box>
       </div>
     </div>
   );

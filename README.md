@@ -1,38 +1,60 @@
-# oyama-busstop-map
+# 小山市の病院マップ
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+小山市の病院をバス停からの徒歩圏内で探せる地図サービスです。
 
-## Getting Started
+## 機能
 
-First, run the development server:
+### 地図表示
+
+- 小山市内の病院とバス停の位置をマーカーで表示
+- 病院とバス停を異なるアイコンで区別
+- バス停からの徒歩圏内を円で表示
+- 徒歩圏外の病院はグレーのマーカーで表示
+- OpenStreetMap を使用した詳細な地図表示
+
+### 病院情報
+
+- 病院名
+- 住所
+- 診療科目
+- 電話番号
+- 診療時間
+- Google での検索リンク
+- バスでのルート検索リンク
+
+### 検索機能
+
+- 診療科目での絞り込み
+- バス停からの徒歩時間（5 分/10 分）での絞り込み
+- 徒歩圏内表示の切り替え
+
+## 技術スタック
+
+- フレームワーク: Next.js
+- 地図ライブラリ: Leaflet (React Leaflet)
+- UI コンポーネント: Material-UI
+- 言語: TypeScript
+
+## 開発環境のセットアップ
 
 ```bash
+# リポジトリのクローン
+git clone https://github.com/OHMORIYUSUKE/oyama-busstop-map.git
+
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+http://localhost:3000 にアクセスして開発版を確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ライセンス
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+/data ディレクトリ以外は MIT ライセンスの下で公開されています。
+だたし、/data 以下のデータは [小山市のオープンデータ](https://www.city.oyama.tochigi.jp/opendata.php) から取得しており、そのデータの利用については [小山市のオープンデータ利用規約](https://www.city.oyama.tochigi.jp/opendata.php?mode=kiyaku) ([CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.ja))に従っています。
 
-## Learn More
+## コントリビューション
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+バグ報告や機能改善の提案は、GitHub の Issue や Pull Requests で受け付けています。

@@ -39,3 +39,11 @@ export const STYLE_CONFIG = {
   /** バス停圏内円の線の太さ */
   CIRCLE_WEIGHT: 0.5,
 } as const;
+
+/**
+ * アプリケーション関連の定数
+ */
+export const APP_CONFIG = {
+  /** GitHubリポジトリのURL */
+  GITHUB_URL: "https://github.com/OHMORIYUSUKE/oyama-busstop-map",
+} as const;
